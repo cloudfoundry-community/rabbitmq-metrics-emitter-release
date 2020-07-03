@@ -20,9 +20,9 @@ require (
 	code.cloudfoundry.org/lager v2.0.0+incompatible
 	code.cloudfoundry.org/rfc5424 v0.0.0-20180905210152-236a6d29298a // indirect
 	github.com/cloudfoundry-community/go-cf-clients-helper v1.0.1
-	github.com/cloudfoundry-community/go-uaa v0.3.1
+	github.com/cloudfoundry-community/go-uaa v0.3.1 // indirect
 	github.com/golang/protobuf v1.4.2 // indirect
-	github.com/streadway/amqp v1.0.0
+	github.com/streadway/amqp v1.0.0 // indirect
 	golang.org/x/net v0.0.0-20200625001655-4c5254603344 // indirect
 	google.golang.org/grpc v1.30.0 // indirect
 	gopkg.in/yaml.v3 v3.0.0-20200615113413-eeeca48fe776
