@@ -2,6 +2,7 @@
 name: rabbit-mq-metrics-emitter
 
 templates:
+  bpm.yml: config/bpm.yml
   config.yml.erb: config/config.yml
   metron_client_ca.crt.erb: config/certs/metron_client/ca.crt
   metron_client.crt.erb: config/certs/metron_client/client.crt
