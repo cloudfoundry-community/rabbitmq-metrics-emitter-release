@@ -1,0 +1,9 @@
+---
+name: rabbit-mq-metrics-emitter
+dependencies:
+- golang-1-linux
+
+files:
+- ./**/*.go
+- go.mod
+- go.sum

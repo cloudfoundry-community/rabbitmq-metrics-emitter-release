@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+set -ex
+
+source /var/vcap/packages/golang-1-linux/bosh/compile.env
+export GOPATH=/var/vcap
+
+go build -o ${BOSH_INSTALL_TARGET}/bin/rabbit-mq-metrics-emitter
+
+cat <<EOT > ${BOSH_INSTALL_TARGET}/bin/rabbit-mq-metrics-emitter.sh
+#!/usr/bin/env bash
+
+${BOSH_INSTALL_TARGET}/bin/rabbit-mq-metrics-emitter \$@
+EOT
+
+chmod +x ${BOSH_INSTALL_TARGET}/bin/rabbit-mq-metrics-emitter.sh

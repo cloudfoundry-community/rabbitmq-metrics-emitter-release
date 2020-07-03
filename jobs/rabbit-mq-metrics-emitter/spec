@@ -1,0 +1,39 @@
+---
+name: rabbit-mq-metrics-emitter
+
+templates:
+  config.yml.erb: config/config.yml
+  metron_client_ca.crt.erb: config/certs/metron_client/ca.crt
+  metron_client.crt.erb: config/certs/metron_client/client.crt
+  metron_client.key.erb: config/certs/metron_client/client.key
+
+packages:
+- rabbit-mq-metrics-emitter
+
+properties:
+  rabbit_mq_metrics_emitter.rmq_management.endpoint:
+    description: "Management endpoint for RabbitMQ"
+  rabbit_mq_metrics_emitter.rmq_management.user:
+    description: "User endpoint for RabbitMQ management endpoint"
+  rabbit_mq_metrics_emitter.rmq_management.password:
+    description: "Passord endpoint for RabbitMQ management endpoint"
+
+  rabbit_mq_metrics_emitter.loggregator.metron_address:
+    description: "IP address and port where the metron agent is running"
+    default: "127.0.0.1:3458"
+  rabbit_mq_metrics_emitter.loggregator.tls.cert:
+    description: "PEM-encoded tls client certificate to connect to loggregator ingress client"
+  rabbit_mq_metrics_emitter.loggregator.tls.key:
+    description: "PEM-encoded tls client key to connect to loggregator ingress client"
+  rabbit_mq_metrics_emitter.loggregator.tls.ca_cert:
+    description: "PEM-encoded ca certificate of loggregator ingress client"
+
+  rabbit_mq_metrics_emitter.cloud_foundry.api:
+    description: "Cloudfoundry api"
+  rabbit_mq_metrics_emitter.cloud_foundry.skip_ssl_validation:
+    description: "Cloudfoundry api ssl validation"
+    defaul: false
+  rabbit_mq_metrics_emitter.cloud_foundry.username:
+    description: "Cloudfoundry api username"
+  rabbit_mq_metrics_emitter.cloud_foundry.password:
+    description: "Cloudfoundry api password"
