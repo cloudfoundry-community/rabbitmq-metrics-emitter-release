@@ -33,7 +33,7 @@ properties:
     description: "Cloudfoundry api"
   rabbit_mq_metrics_emitter.cloud_foundry.skip_ssl_validation:
     description: "Cloudfoundry api ssl validation"
-    defaul: false
+    default: false
   rabbit_mq_metrics_emitter.cloud_foundry.username:
     description: "Cloudfoundry api username"
   rabbit_mq_metrics_emitter.cloud_foundry.password:
