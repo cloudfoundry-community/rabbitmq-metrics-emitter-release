@@ -1,0 +1,48 @@
+instance_groups:
+- name:      rmq-broker
+  jobs:
+  - name: rabbitmq-service-broker
+    properties:
+      rabbitmq-service-broker:
+        service:
+          uuid:      54766614-4530-41e6-b5df-8ccb2dc3fd3a
+          plan_uuid: f2b16201-b927-4a54-b744-2071ba299f0a
+  - name: loggregator_agent
+    release: loggregator-agent
+    consumes:
+      doppler:
+        from: doppler
+        deployment: (( grab meta.cf.deployment_name ))
+    properties:
+      loggregator:
+        tls:
+          ca_cert: (( vault meta.cf.exodus_path ":loggregator_ca" ))
+          agent:
+            cert: (( vault meta.cf.exodus_path ":loggregator_tls_agent_cert" ))
+            key: (( vault meta.cf.exodus_path ":loggregator_tls_agent_key" ))
+  - name: rabbitmq-metrics-emitter
+    release: rabbitmq-metrics-emitter
+    properties:
+      rabbitmq_metrics_emitter:
+        cloud_foundry:
+          api:    (( concat "https://api." meta.cf.system_domain ))
+          skip_ssl_validation: true
+          username:   (( vault meta.cf.exodus_path ":admin_username" ))
+          password:   (( vault meta.cf.exodus_path ":admin_password" ))
+        rmq_management:
+          endpoint: (( concat "http://" params.rmq_domain ":15672/api" ))
+          user: management
+          password: (( vault meta.vault "/rabbitmq/admin/management:password" ))
+        loggregator:
+          tls:
+            cert: (( vault meta.cf.exodus_path ":loggregator_tls_agent_cert" ))
+            key: (( vault meta.cf.exodus_path ":loggregator_tls_agent_key" ))
+            ca_cert: (( vault meta.cf.exodus_path ":loggregator_ca" ))
+
+releases:
+- name: rabbitmq-metrics-emitter
+  version: latest
+- name: loggregator-agent
+  url: https://bosh.io/d/github.com/cloudfoundry/loggregator-agent-release?v=3.9
+  version: "3.9"
+  sha1: bf723af956a61c7b51db0ba535c871bad24dd289
