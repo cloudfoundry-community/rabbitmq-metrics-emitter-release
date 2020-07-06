@@ -12,29 +12,29 @@ packages:
 - rabbitmq-metrics-emitter
 
 properties:
-  rabbit_mq_metrics_emitter.rmq_management.endpoint:
+  rabbitmq_metrics_emitter.rmq_management.endpoint:
     description: "Management endpoint for RabbitMQ"
-  rabbit_mq_metrics_emitter.rmq_management.user:
+  rabbitmq_metrics_emitter.rmq_management.user:
     description: "User endpoint for RabbitMQ management endpoint"
-  rabbit_mq_metrics_emitter.rmq_management.password:
+  rabbitmq_metrics_emitter.rmq_management.password:
     description: "Passord endpoint for RabbitMQ management endpoint"
 
-  rabbit_mq_metrics_emitter.loggregator.metron_address:
+  rabbitmq_metrics_emitter.loggregator.metron_address:
     description: "IP address and port where the metron agent is running"
     default: "127.0.0.1:3458"
-  rabbit_mq_metrics_emitter.loggregator.tls.cert:
+  rabbitmq_metrics_emitter.loggregator.tls.cert:
     description: "PEM-encoded tls client certificate to connect to loggregator ingress client"
-  rabbit_mq_metrics_emitter.loggregator.tls.key:
+  rabbitmq_metrics_emitter.loggregator.tls.key:
     description: "PEM-encoded tls client key to connect to loggregator ingress client"
-  rabbit_mq_metrics_emitter.loggregator.tls.ca_cert:
+  rabbitmq_metrics_emitter.loggregator.tls.ca_cert:
     description: "PEM-encoded ca certificate of loggregator ingress client"
 
-  rabbit_mq_metrics_emitter.cloud_foundry.api:
+  rabbitmq_metrics_emitter.cloud_foundry.api:
     description: "Cloudfoundry api"
-  rabbit_mq_metrics_emitter.cloud_foundry.skip_ssl_validation:
+  rabbitmq_metrics_emitter.cloud_foundry.skip_ssl_validation:
     description: "Cloudfoundry api ssl validation"
     default: false
-  rabbit_mq_metrics_emitter.cloud_foundry.username:
+  rabbitmq_metrics_emitter.cloud_foundry.username:
     description: "Cloudfoundry api username"
-  rabbit_mq_metrics_emitter.cloud_foundry.password:
+  rabbitmq_metrics_emitter.cloud_foundry.password:
     description: "Cloudfoundry api password"
