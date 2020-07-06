@@ -4,7 +4,7 @@ import (
 	"code.cloudfoundry.org/cli/api/cloudcontroller/ccv2"
 	"code.cloudfoundry.org/cli/api/cloudcontroller/ccv2/constant"
 	"github.com/cloudfoundry-community/go-cf-clients-helper"
-	"github.com/starkandwayne/rabbit-mq-metrics-emitter/config"
+	"github.com/starkandwayne/rabbitmq-metrics-emitter/config"
 )
 
 type CfClient struct {

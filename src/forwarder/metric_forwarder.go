@@ -5,8 +5,8 @@ import (
 
 	"code.cloudfoundry.org/go-loggregator"
 	"code.cloudfoundry.org/lager"
-	"github.com/starkandwayne/rabbit-mq-metrics-emitter/config"
-	"github.com/starkandwayne/rabbit-mq-metrics-emitter/management"
+	"github.com/starkandwayne/rabbitmq-metrics-emitter/config"
+	"github.com/starkandwayne/rabbitmq-metrics-emitter/management"
 )
 
 type MetricForwarder interface {

@@ -1,5 +1,5 @@
 ---
-name: rabbit-mq-metrics-emitter
+name: rabbitmq-metrics-emitter
 blobstore:
   provider: local
   options:

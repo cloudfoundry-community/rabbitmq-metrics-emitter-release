@@ -1,0 +1,5 @@
+processes:
+- name: rabbitmq-metrics-emitter
+  executable: /var/vcap/jobs/rabbitmq-metrics-emitter/packages/rabbitmq-metrics-emitter/bin/rabbitmq-metrics-emitter.sh
+  args:
+  - /var/vcap/jobs/rabbitmq-metrics-emitter/config/config.yml

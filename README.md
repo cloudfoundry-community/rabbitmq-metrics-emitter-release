@@ -1,2 +1,2 @@
-# rabbit-mq-metrics-emitter-rellease
+# rabbitmq-metrics-emitter-rellease
 

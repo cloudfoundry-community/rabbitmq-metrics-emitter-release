@@ -1,4 +1,4 @@
-module github.com/starkandwayne/rabbit-mq-metrics-emitter
+module github.com/starkandwayne/rabbitmq-metrics-emitter
 
 go 1.14
 

@@ -8,14 +8,14 @@ import (
 	"time"
 
 	"code.cloudfoundry.org/lager"
-	"github.com/starkandwayne/rabbit-mq-metrics-emitter/cfclient"
-	"github.com/starkandwayne/rabbit-mq-metrics-emitter/config"
-	"github.com/starkandwayne/rabbit-mq-metrics-emitter/forwarder"
-	"github.com/starkandwayne/rabbit-mq-metrics-emitter/management"
+	"github.com/starkandwayne/rabbitmq-metrics-emitter/cfclient"
+	"github.com/starkandwayne/rabbitmq-metrics-emitter/config"
+	"github.com/starkandwayne/rabbitmq-metrics-emitter/forwarder"
+	"github.com/starkandwayne/rabbitmq-metrics-emitter/management"
 )
 
 func main() {
-	logger := lager.NewLogger("rabbit-mq-metrics-emitter")
+	logger := lager.NewLogger("rabbitmq-metrics-emitter")
 	logger.RegisterSink(lager.NewWriterSink(os.Stdout, lager.DEBUG))
 	logger.RegisterSink(lager.NewWriterSink(os.Stderr, lager.ERROR))
 

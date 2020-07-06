@@ -1,5 +1,5 @@
 ---
-name: rabbit-mq-metrics-emitter
+name: rabbitmq-metrics-emitter
 dependencies:
 - golang-1-linux
 

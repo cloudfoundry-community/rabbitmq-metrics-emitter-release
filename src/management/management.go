@@ -6,7 +6,7 @@ import (
 	"time"
 
 	"code.cloudfoundry.org/lager"
-	"github.com/starkandwayne/rabbit-mq-metrics-emitter/config"
+	"github.com/starkandwayne/rabbitmq-metrics-emitter/config"
 	"gopkg.in/yaml.v3"
 )
 

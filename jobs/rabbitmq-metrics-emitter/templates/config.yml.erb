@@ -1,0 +1,17 @@
+rmq_management:
+  endpoint: <%= p('rabbitmq_metrics_emitter.rmq_management.endpoint') %>
+  user: <%= p('rabbitmq_metrics_emitter.rmq_management.user') %>
+  password: <%= p('rabbitmq_metrics_emitter.rmq_management.password') %>
+
+loggregator:
+  metron_address: <%= p('rabbitmq_metrics_emitter.loggregator.metron_address') %>
+  tls:
+    key_file: "/var/vcap/jobs/rabbitmq-metrics-emitter/config/certs/metron_client/client.key"
+    cert_file: "/var/vcap/jobs/rabbitmq-metrics-emitter/config/certs/metron_client/client.crt"
+    ca_file: "/var/vcap/jobs/rabbitmq-metrics-emitter/config/certs/metron_client/ca.crt"
+
+cloud_foundry:
+  api_url: <%= p('rabbitmq_metrics_emitter.cloud_foundry.api') %>
+  skip_ssl_validation: <%= p('rabbitmq_metrics_emitter.cloud_foundry.skip_ssl_validation') %>
+  username: <%= p('rabbitmq_metrics_emitter.cloud_foundry.username') %>
+  password: <%= p('rabbitmq_metrics_emitter.cloud_foundry.password') %>

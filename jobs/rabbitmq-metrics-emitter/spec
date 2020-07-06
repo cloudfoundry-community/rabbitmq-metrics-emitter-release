@@ -1,5 +1,5 @@
 ---
-name: rabbit-mq-metrics-emitter
+name: rabbitmq-metrics-emitter
 
 templates:
   bpm.yml: config/bpm.yml
@@ -9,7 +9,7 @@ templates:
   metron_client.key.erb: config/certs/metron_client/client.key
 
 packages:
-- rabbit-mq-metrics-emitter
+- rabbitmq-metrics-emitter
 
 properties:
   rabbit_mq_metrics_emitter.rmq_management.endpoint:
