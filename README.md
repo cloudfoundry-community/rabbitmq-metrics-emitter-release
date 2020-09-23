@@ -10,9 +10,9 @@ Here is an example autoscaler policy that would react to the number of unprocess
 
 ```
 {
-	"instance_min_count": 1,
-	"instance_max_count": 3,
-	"scaling_rules": [
+  "instance_min_count": 1,
+  "instance_max_count": 3,
+  "scaling_rules": [
     {
       "metric_type": "dummy_queue_messages_ready",
       "threshold": 1,
