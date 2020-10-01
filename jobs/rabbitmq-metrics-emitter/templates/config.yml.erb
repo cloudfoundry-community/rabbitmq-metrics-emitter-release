@@ -1,5 +1,6 @@
 rmq_management:
   endpoint: <%= p('rabbitmq_metrics_emitter.rmq_management.endpoint') %>
+  skip_ssl_validation: <%= p('rabbitmq_metrics_emitter.rmq_management.skip_ssl_validation') %>
   user: <%= p('rabbitmq_metrics_emitter.rmq_management.user') %>
   password: <%= p('rabbitmq_metrics_emitter.rmq_management.password') %>
 

@@ -12,6 +12,9 @@ packages:
 - rabbitmq-metrics-emitter
 
 properties:
+  rabbitmq_metrics_emitter.rmq_management.skip_ssl_validation:
+    description: "Skip ssl validation for RabbitMQ management endpoint"
+    default: false
   rabbitmq_metrics_emitter.rmq_management.endpoint:
     description: "Management endpoint for RabbitMQ"
   rabbitmq_metrics_emitter.rmq_management.user:

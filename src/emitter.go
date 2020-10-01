@@ -42,7 +42,10 @@ func main() {
 		logger.Fatal("Couldn't create cfClient", err)
 	}
 
-	managementClient := management.NewManagementClient(logger, &config)
+	managementClient, err := management.NewManagementClient(logger, &config)
+	if err != nil {
+		logger.Fatal("Couldn't create RMQ Management client", err)
+	}
 
 	ticker := time.NewTicker(5 * time.Second)
 	quit := make(chan struct{})

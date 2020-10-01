@@ -13,9 +13,10 @@ type Config struct {
 }
 
 type RMQManagement struct {
-	Endpoint string `yaml:"endpoint"`
-	User     string `yaml:"user"`
-	Password string `yaml:"password"`
+	Endpoint          string `yaml:"endpoint"`
+	SkipSslValidation bool   `yaml:"skip_ssl_validation"`
+	User              string `yaml:"user"`
+	Password          string `yaml:"password"`
 }
 type CfConfig struct {
 	ApiUrl            string `yaml:"api_url"`

@@ -1,6 +1,7 @@
 package management
 
 import (
+	"crypto/tls"
 	"io/ioutil"
 	"net/http"
 	"time"
@@ -25,15 +26,20 @@ type Client struct {
 	httpClient *http.Client
 }
 
-func NewManagementClient(logger lager.Logger, config *config.Config) Client {
+func NewManagementClient(logger lager.Logger, config *config.Config) (Client, error) {
 	httpClient := http.Client{
+		Transport: &http.Transport{
+			TLSClientConfig: &tls.Config{
+				InsecureSkipVerify: config.RMQManagement.SkipSslValidation,
+			},
+		},
 		Timeout: time.Second * 30,
 	}
 	return Client{
 		logger:     logger.Session("management"),
 		httpClient: &httpClient,
 		config:     config,
-	}
+	}, nil
 }
 
 func (client *Client) GetVhosts() ([]VhostInfo, error) {
