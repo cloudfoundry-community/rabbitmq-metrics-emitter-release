@@ -2,7 +2,9 @@
 
 This repo contains the code and boshrelease for the rabbitmq-metrics-emitter.
 
-When deployed together with the [https://github.com/pivotal-cf/cf-rabbitmq-multitenant-broker-release](multitenant rabbitmq service-broker) it will emit the metrics needed to configure an app autoscaling policy to react to queue depth (as measured by the `messages_ready` metric).
+When deployed together with the [multitenant rabbitmq service-broker][1] it will emit the metrics needed to configure an app autoscaling policy to react to queue depth (as measured by the `messages_ready` metric).
+
+[1]: https://github.com/pivotal-cf/cf-rabbitmq-multitenant-broker-release
 
 Metrics are emmitted under the name `<queue-name>-<metric-name>` currently the `messages_ready` is the only one being recorded
 
