@@ -13,17 +13,20 @@ replace github.com/cloudfoundry/sonde-go => github.com/cloudfoundry/sonde-go v0.
 replace code.cloudfoundry.org/go-log-cache => code.cloudfoundry.org/go-log-cache v1.0.1-0.20200316170138-f466e0302c34
 
 require (
-	code.cloudfoundry.org/cli v7.0.1+incompatible
+	code.cloudfoundry.org/cli v7.1.0+incompatible
+	code.cloudfoundry.org/diego-ssh v0.0.0-20230612151408-7461829a983b // indirect
 	code.cloudfoundry.org/go-diodes v0.0.0-20190809170250-f77fb823c7ee // indirect
+	code.cloudfoundry.org/go-log-cache v0.0.0-00010101000000-000000000000 // indirect
 	code.cloudfoundry.org/go-loggregator v7.4.0+incompatible
+	code.cloudfoundry.org/inigo v0.0.0-20230612153013-b300679e6ed6 // indirect
 	code.cloudfoundry.org/jsonry v1.1.0 // indirect
 	code.cloudfoundry.org/lager v2.0.0+incompatible
-	code.cloudfoundry.org/rfc5424 v0.0.0-20180905210152-236a6d29298a // indirect
+	code.cloudfoundry.org/lager/v3 v3.0.2 // indirect
 	github.com/cloudfoundry-community/go-cf-clients-helper v1.0.1
-	github.com/cloudfoundry-community/go-uaa v0.3.1 // indirect
-	github.com/golang/protobuf v1.4.2 // indirect
-	github.com/streadway/amqp v1.0.0 // indirect
-	golang.org/x/net v0.0.0-20200625001655-4c5254603344 // indirect
-	google.golang.org/grpc v1.30.0 // indirect
-	gopkg.in/yaml.v3 v3.0.0-20200615113413-eeeca48fe776
+	github.com/moby/moby v20.10.25+incompatible // indirect
+	github.com/moby/term v0.5.0 // indirect
+	github.com/onsi/ginkgo/v2 v2.11.0 // indirect
+	github.com/sabhiram/go-gitignore v0.0.0-20210923224102-525f6e181f06 // indirect
+	github.com/tedsuo/ifrit v0.0.0-20230516164442-7862c310ad26 // indirect
+	gopkg.in/yaml.v3 v3.0.1
 )
