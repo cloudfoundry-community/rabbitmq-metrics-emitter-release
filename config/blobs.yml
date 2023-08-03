@@ -1,1 +1,4 @@
-{}
+rabbitmq-metrics-emitter:
+  size: 9860000
+  object_id: bad9ba9f-cfc4-4857-4751-1bec5569a9e1
+  sha: sha256:a8a447a289f9185b040487e4bed205d8f94fe0e6be773ec4bb103a84b4b66790

@@ -1,0 +1,27 @@
+name: rabbitmq-metrics-emitter
+version: 0.5.0
+commit_hash: b0e4851
+uncommitted_changes: false
+jobs:
+- name: rabbitmq-metrics-emitter
+  version: f02444f6c7bec8867ef9698141521189144335d3a4478070a503859c4eb67fb5
+  fingerprint: f02444f6c7bec8867ef9698141521189144335d3a4478070a503859c4eb67fb5
+  sha1: sha256:b931e75f8a47ca0af4bfaf11302810c5aae12bd84b129df9b6d57b8b03241f7d
+  packages:
+  - rabbitmq-metrics-emitter
+packages:
+- name: golang-1.20-linux
+  version: 29f2024e7d815be0694944c3c3c9512914a36a31d5fa1b2cbd2452c8d331ce90
+  fingerprint: 29f2024e7d815be0694944c3c3c9512914a36a31d5fa1b2cbd2452c8d331ce90
+  sha1: sha256:5992a9bcc5b1413ee71292da7102d7ee516b13b9d22e4c762e65b6c878d6a5a5
+  dependencies: []
+- name: rabbitmq-metrics-emitter
+  version: f6da394282fd9d7dc0c463e48930131b7f7e248381f24393b3276afbfc0a398f
+  fingerprint: f6da394282fd9d7dc0c463e48930131b7f7e248381f24393b3276afbfc0a398f
+  sha1: sha256:b6113aed6e7c2fdcc8476d5e44684add0b8216cd27012ed45c3bc9744f51a0fa
+  dependencies:
+  - golang-1.20-linux
+license:
+  version: 3235b2297f873ec0b8438827c91d8dff65cbceb112f67d9d803a2d32d2b668c5
+  fingerprint: 3235b2297f873ec0b8438827c91d8dff65cbceb112f67d9d803a2d32d2b668c5
+  sha1: sha256:db8cd2f99c26831765c70541ce1f1f7b3597fd16191cb583a31dd8073e36a946
